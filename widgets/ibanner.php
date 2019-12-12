@@ -124,7 +124,7 @@ class uael_ibanner_class extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .uael-module-content.uael-ib2-outter.uael-new-ib img' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .uael-new-ib-img' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -157,7 +157,7 @@ class uael_ibanner_class extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .' => 'mix-blend-mode: {{VALUE}}',
+					'{{WRAPPER}} .uael-new-ib-img' => 'mix-blend-mode: {{VALUE}}',
 				],
 			]
 		);
@@ -685,4 +685,21 @@ class uael_ibanner_class extends Widget_Base {
 		</div> 
 		<?php
 	}
+	protected function _content_template() {
+		?>
+		<div class="uael-module-content uael-ib2-outter uael-new-ib uael-ib-effect-{{{settings.uael_ibanner_style}}}">
+			<img class="uael-new-ib-img" src="{{{settings.uael_ibanner_image.url}}}">
+			<div class="uael-new-ib-desc">
+			
+			<# if ( '' != settings.uael_ibanner_title_text ) { #>
+			<{{{settings.uael_ibanner_title_tags}}} class="elementor-inline-editing uael-new-ib-title uael-simplify">
+			{{{settings.uael_ibanner_title_text}}}
+			</{{{settings.uael_ibanner_title_tags}}}>
+			<# } #>
+
+		<div class="uael-new-ib-content uael-text-editor uael-simplify">{{{settings.uael_ibanner_description_text}}}</div>
+	</div>
+</div>
+<?php
+}
 }
