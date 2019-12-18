@@ -1,3 +1,234 @@
+.uael-main.uael-main-new-ib {
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.uael-main-new-ib, .uael-main-new-ib img {
+    position: relative;
+}
+.uael-main-new-ib {
+    box-sizing: border-box;
+}
+.uael-main-new-ib img {
+    min-width: 100%;
+    max-width: 100%;
+    -webkit-transition: opacity .35s;
+    transition: opacity .35s;
+    -webkit-backface-visibility: hidden;
+}
+.uael-main-new-ib img {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.uael-main-style1 img {
+    -webkit-transition: opacity .35s, -webkit-transform .35s;
+    transition: opacity .35s, transform .35s;
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+}
+.uael-main-style1 .uael-content {
+    padding: 45px;
+}
+.uael-main-style1 .uael-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.uael-main-new-ib .uael-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.uael-main-new-ib .uael-content {
+    padding: 25px;
+    font-size: 1em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+}
+.uael-main-style1 .uael-content-title {
+    padding: 10px 0 15px;
+}
+.uael-main-style1 .uael-content-title, .uael-main-style1 .uael-content-desp {
+    width: 100%;
+}
+.uael-main-new-ib .uael-content-title, .uabb-main-new-ib p {
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+    text-decoration: inherit;
+}
+.uabb-main-style1 .uael-content-desp {
+    margin: 0 auto;
+    max-width: 90%;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.uabb-main-new-ib .uael-content-desp {
+    line-height: 1.6em;
+}
+.uael-main .uael-main-new-ib .uael-main-style1::before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+.uael-main-style1 .uael-content-desp {
+    margin: 0 auto;
+    max-width: 90%;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); 
+}
+.uael-main-style1 .uael-content-desp, .uael-main-style1 .uael-content-desp::before {
+    opacity: 0;
+    -webkit-transition: opacity .35s, -webkit-transform .35s;
+    transition: opacity .35s, transform .35s;
+}
+.uael-main-hover img {
+   -webkit-transform: scale(1);
+   transform: scale(1);
+}
+.uael-main-style1.uael-main-hover .uael-content-desp,
+.uael-main-style1.uael-main-hover .uael-content::before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.uael-main-style1 .uael-content::before {
+    opacity: 0;
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid #fff;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.uabb-main.uael-main-new-ib::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(188, 111, 179, 0.26);
+}
+.uael-ib-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: background-color 150ms linear;
+    transition: background-color 150ms linear;
+}
+/*.uael-main-style1 img {
+    width: -webkit-calc(100% + 60px)!important;
+    width: -moz-calc(100% + 60px)!important;
+    width: calc(100% + 60px)!important;
+    max-width: -webkit-calc(100% + 60px)!important;
+    max-width: -moz-calc(100% + 60px)!important;
+    max-width: calc(100% + 60px)!important;
+    -webkit-transition: opacity .35s, -webkit-transform .35s;
+    transition: opacity .35s, transform .35s;
+    -webkit-transform: translate3d(-30px, 0, 0)scale(1.12);
+    transform: translate3d(-30px, 0, 0)scale(1.12);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+    }*/
+    .uael-main-style1.uael-main-min-height:not(.uael-main-min-height) img {
+        max-width: none!important;
+        width: auto!important
+    }
+    .uael-main-style1.uael-main-min-height img {
+        min-height: 100%;
+        width: auto;
+        max-width: none
+    }
+    /*------------------------------------------------------------------------------------*/
+    
+    /*style 2*/
+    
+    /*------------------------------------------------------------------------------------*/
+    .uael-main.uael-main-style2 {
+        width: 100%;
+        height: 100%;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        cursor: default;
+    }
+    .uael-main.uael-main-style2 .uael-content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+    }
+    .uael-main.uael-main-style2 img {
+        display: block;
+        position: relative;
+        -webkit-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in;
+    }
+    .uael-main.uael-main-hover img {
+      filter: grayscale(1) blur(3px);
+      -webkit-filter: grayscale(1) blur(3px);
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+  }
+  .uael-main.uael-main-style2 .uael-content .uael-content-title {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+}
+.uael-main.uael-main-style2 .uael-content .uael-content-desp {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    border: 1px solid #fff;
+    margin: 50px 0 0 0;
+    background-color: transparent;
+}
+.uael-main.uael-main-style2.uael-main-hover .uael-content .uael-content-desp {
+    box-shadow: 0 0 5px #fff;
+}
+.uael-main.uael-main-style2 .uael-content .uael-content-desp, .uael-main.uael-main-style2 .uael-content .uael-content-title {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+.uael-main.uael-main-style2.uael-main-hover .uael-content .uael-content-desp,.uael-main.uael-main-style2.uael-main-hover .uael-content .uael-content-title {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+/*---------------------------------------------------------------------------*/
 /* Fix Edit issue */
 .fl-builder-edit .uael-new-ib {
     pointer-events: none;
@@ -181,6 +412,7 @@
     max-width: none!important;
     min-height: 100%
 }
+
 .uael-ib-effect-style2 img {
     width: 100%
 }

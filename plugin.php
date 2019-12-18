@@ -24,10 +24,15 @@ class Plugin {
 		wp_register_style( 'ibanner_style',plugins_url('\assets\css\ibanner.css',__FILE__), NULL, true );
 		wp_enqueue_style('ibanner_style');
 	}
+	public function include_ibanner_script() {
+		wp_register_script( 'ibanner_script', plugins_url( '\assets\js\ibanner.js', __FILE__ ),[ 'jquery' ] );
+		wp_enqueue_script( 'ibanner_script' );
+	}
 
 	public function __construct() {		
 		add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_ibanner' ] );
 		add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'include_ibanner_style' ] );
+		add_action( 'elementor/frontend/after_register_scripts', [ $this, 'include_ibanner_script' ] );
 	}
 }
 Plugin::instance();
