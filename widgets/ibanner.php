@@ -51,32 +51,32 @@ class uael_ibanner_class extends Widget_Base {
 				],
 			]
 		);
-				$this->add_control(
-			'uael_ibanner_height',
-			[
-				'label' => __( 'Banner Height', 'uael_interactive_banner' ),
-				'type' => Controls_Manager::SLIDER,
-				'range' => [
-					'em' => [
-						'min' => 1,
-						'max' => 300,
-						'step' => 1,
-					],
-					'px' => [
-						'min' =>20,
-						'max' => 300,
-						'step' => 1,
-					],
-				],
-				'default' => [
-					'unit' => 'em',
-				],
-				'size_units' => [ 'em', 'px' ],
-				'selectors' => [
-					'{{WRAPPER}} .uael-main.uael-main-min-height ' => 'height: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
+		// 		$this->add_control(
+		// 	'uael_ibanner_height',
+		// 	[
+		// 		'label' => __( 'Banner Height', 'uael_interactive_banner' ),
+		// 		'type' => Controls_Manager::SLIDER,
+		// 		'range' => [
+		// 			'em' => [
+		// 				'min' => 1,
+		// 				'max' => 300,
+		// 				'step' => 1,
+		// 			],
+		// 			'px' => [
+		// 				'min' =>20,
+		// 				'max' => 300,
+		// 				'step' => 1,
+		// 			],
+		// 		],
+		// 		'default' => [
+		// 			'unit' => 'em',
+		// 		],
+		// 		'size_units' => [ 'em', 'px' ],
+		// 		'selectors' => [
+		// 			'{{WRAPPER}} .uael-main.uael-main-min-height ' => 'height: {{SIZE}}{{UNIT}};',
+		// 		],
+		// 	]
+		// );
 		$this->add_control(
 			'uael_ibanner_title_text',
 			[
@@ -229,7 +229,7 @@ class uael_ibanner_class extends Widget_Base {
 		$this->add_render_attribute( 'uael_ib_title', 'class', 'uael-content-title' );
 		$this->add_render_attribute( 'uael_ib_description', 'class', 'uael-content-desp' );
 		?>
-		<div class="uael-main uael-main-new-ib uael-main-<?php echo $settings['uael_ibanner_style']; ?> <?php echo ( '' != $settings['uael_ibanner_height'] ) ? 'uael-main-min-height' : ''; ?>">
+		<div class="uael-main uael-main-new-ib uael-main-<?php echo $settings['uael_ibanner_style'];?> ">
 			<img class="uael-main-img" src="<?php echo $settings['uael_ibanner_image']['url']?>">
 			<div class="uael-ib-overlay"></div>
 			<div class="uael-content">
