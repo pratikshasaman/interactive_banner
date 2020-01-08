@@ -21,7 +21,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\uael_ibanner_class() );
 	}
 	public function include_ibanner_style() {
-		wp_register_style( 'ibanner_style',plugins_url('\assets\css\ibanner.css',__FILE__), NULL, true );
+		wp_register_style( 'ibanner_style',plugins_url('\assets\css\ibanner.css',__FILE__), NULL);
 		wp_enqueue_style('ibanner_style');
 	}
 	public function include_ibanner_script() {

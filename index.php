@@ -6,7 +6,7 @@
  * Version:     2.7.0
  * Author:      Pratiksha S
  * Author URI:  https://elementor.com/
- * Text Domain: uael_interactive_banner
+ * Text Domain: uael
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; 
@@ -23,7 +23,7 @@ final class uael_ibanner_class {
 	}
 
 	public function i18n() {
-		load_plugin_textdomain( 'uael_interactive_banner' );
+		load_plugin_textdomain( 'uael' );
 	}
 
 	public function init() {
@@ -53,9 +53,9 @@ final class uael_ibanner_class {
 		}
 
 		$message = sprintf(
-			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'uael_interactive_banner' ),
-			'<strong>' . esc_html__( 'Elementor Hello World', 'uael_interactive_banner' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'uael_interactive_banner' ) . '</strong>'
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'uael' ),
+			'<strong>' . esc_html__( 'Elementor Hello World', 'uael' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'uael' ) . '</strong>'
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -67,9 +67,9 @@ final class uael_ibanner_class {
 		}
 
 		$message = sprintf(
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'uael_interactive_banner' ),
-			'<strong>' . esc_html__( 'Elementor Hello World', 'uael_interactive_banner' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'uael_interactive_banner' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'uael' ),
+			'<strong>' . esc_html__( 'Elementor Hello World', 'uael' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'uael' ) . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
 
@@ -82,9 +82,9 @@ final class uael_ibanner_class {
 		}
 
 		$message = sprintf(
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'uael_interactive_banner' ),
-			'<strong>' . esc_html__( 'Elementor Hello World', 'uael_interactive_banner' ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', 'uael_interactive_banner' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'uael' ),
+			'<strong>' . esc_html__( 'Elementor Hello World', 'uael' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'uael' ) . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
 
