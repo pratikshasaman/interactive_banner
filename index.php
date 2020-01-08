@@ -11,7 +11,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; 
 
-final class uael_ibanner_class {
+final class uael_ibanner_class1 {
 
 	const VERSION = '2.5.0';
 	const MINIMUM_ELEMENTOR_VERSION = '2.7.0';
@@ -91,4 +91,4 @@ final class uael_ibanner_class {
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
 	}
 }
-new uael_ibanner_class();
+new uael_ibanner_class1();
