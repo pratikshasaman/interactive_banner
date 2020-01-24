@@ -7,7 +7,7 @@
  width: 100%;
  height: 100%;
 }
-.uael-ibanner-container ul.ibanner-ul-list {
+.uael-ibanner-container ul.ibanner-ul-list{
   width: 100%;
   margin: 0;
   padding: 0;
@@ -18,6 +18,9 @@
   width: 100%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+li.ibanner-list-li .uael-ibanner-description {
+  padding: 20px 2.5em;
 }
 .ibanner-orientation-horizontal .ibanner-list-li {
   display: table-cell;
@@ -46,11 +49,30 @@
  -ms-flex-align: center;
  align-items: center;
 }
-.ibanner-orientation-horizontal .ibanner-ul-list:hover .ibanner-list-li {
+.uael-ibanner-container .ibanner-content * { 
+  opacity: 0;
+  visibility: hidden;
+}
+.uael-ibanner-container .ibanner-content * {
+  -webkit-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+.uael-ibanner-container .ibanner-list-li:hover .ibanner-content *{
+ -webkit-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ -moz-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ -ms-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ -o-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.ibanner-orientation-horizontal .ibanner-ul-list li{
   width: 12%;
 }
-.ibanner-orientation-horizontal .ibanner-ul-list:hover li.ibanner-list-li:hover,
-.ibanner-orientation-horizontal .ibanner-ul-list li.ibanner-list-li-active {
+/*------------------------------------[On Hover]------------------------------------------*/
+.ibanner-orientation-horizontal ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-default:hover,
+.ibanner-orientation-horizontal ul[data-accordion-type="onhover"] li.ibanner-list-li-active {
   width: 30%;
 }
 .uael-ibanner-container .ibanner-background  {
@@ -83,94 +105,545 @@
   -o-transition: background-color 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-.elementor-editor-active .uael-ibanner-container .ibanner-content {
+.elementor-editor-active .uael-ibanner-container .ibanner-content  {
   z-index: 100;
-  text-align: center;
 }
-.ibanner-content .uael-ibanner-title {
+ul[data-accordion-type="onhover"] .ibanner-content .uael-ibanner-title {
   margin: 0;
   padding: 0;
 }
-.ibanner-content .uael-ibanner-title {
+.ibanner-effect-default .ibanner-content .uael-ibanner-title{
   -webkit-transform: translate3d(0,-50px,0);
   transform: translate3d(0,-50px,0);
 }
-.uael-ibanner-section .uael-ibanner-icon {
-    font-size: 20px;
+.uael-ibanner-section .ibanner-effect-default .uael-ibanner-icon {
+  font-size: 20px;
 }
-.uael-ibanner-section .uael-ibanner-icon,
-.ibanner-content .uael-ibanner-description {
+.uael-ibanner-section .ibanner-effect-default .uael-ibanner-icon,
+.ibanner-effect-default .ibanner-content .uael-ibanner-description {
   -webkit-transform: translate3d(0,-50px,0);
   transform: translate3d(0,-50px,0);
 }
-.ibanner-content .uael-ibanner-description {
-    -webkit-transform: translate3d(0,50px,0);
-    transform: translate3d(0,50px,0);
+.ibanner-effect-default .ibanner-content .uael-ibanner-description {
+  -webkit-transform: translate3d(0,50px,0);
+  transform: translate3d(0,50px,0);
 }
-.uael-ibanner-container .ibanner-content * { /* Hide the content line title, desp, icon */
-  opacity: 0;
-  visibility: hidden;
-}
-.uael-ibanner-container .ibanner-list-li:hover .ibanner-content * { /* On Hover content transmission*/
+.uael-ibanner-container ul[data-accordion-type="onhover"] .ibanner-list-li.ibanner-effect-default:hover .ibanner-content * {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
-.uael-ibanner-container .ibanner-content * {
-    -webkit-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
-     -moz-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
-     -ms-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
-     -o-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
-     transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+/*----------------------------------------[On Click]-------------------------------------*/
+.ibanner-orientation-horizontal .ibanner-ul-list li.ibanner-effect-default.on-click-class {
+  width: 30%;
 }
- .uael-ibanner-container .ibanner-list-li:hover .ibanner-content * {
-     -webkit-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
-     -moz-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
-     -ms-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
-     -o-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
-     transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+.uael-ibanner-section li.ibanner-effect-default.on-click-class .uael-ibanner-icon {
+  -webkit-transform: translate3d(0,-50px,0);
+  transform: translate3d(0,-50px,0);
 }
- /* Vertical Orientation */
- .ibanner-orientation-vertical .ibanner-ul-list {
-     display: -ms-flexbox;
-     display: -webkit-flex;
-     display: -moz-flex;
-     display: -ms-flex;
-     display: flex;
-     -webkit-box-orient: vertical;
-     -webkit-box-direction: normal;
-     -ms-flex-direction: column;
-     flex-direction: column;
-     -webkit-box-align: center;
-     -ms-flex-align: center;
-     align-items: center;
+li.ibanner-effect-default.on-click-class .ibanner-content .uael-ibanner-description {
+  -webkit-transform: translate3d(0,50px,0);
+  transform: translate3d(0,50px,0);
+}
+.uael-ibanner-container li.ibanner-effect-default.on-click-class .ibanner-content * {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+li.ibanner-effect-default.on-click-class .ibanner-content .uael-ibanner-title {
+  -webkit-transform: translate3d(0,0px,0);
+  transform: translate3d(0,0px,0);
+}
+.uael-ibanner-container li.ibanner-effect-default.on-click-class .ibanner-content *{
+ -webkit-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ -moz-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ -ms-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ -o-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.ibanner-orientation-vertical .ibanner-ul-list li.ibanner-effect-default.on-click-class {
+  height: 400px !important;
+}
+/*------------------------------------[Vertical Orientation]----------------------------------------*/
+.ibanner-orientation-vertical .ibanner-ul-list {
+ display: -ms-flexbox;
+ display: -webkit-flex;
+ display: -moz-flex;
+ display: -ms-flex;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
 }
 .ibanner-orientation-vertical .ibanner-list-li {
-    width: 100%;
-    list-style-type: none;
-    height: 200px;
+  width: 100%;
+  list-style-type: none;
+  height: 200px;
 }
-.ibanner-orientation-vertical .ibanner-ul-list:hover li.ibanner-list-li:hover {
-    height: 400px !important;
+.ibanner-orientation-vertical ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-default:hover {
+  height: 400px !important;
 }
-
+/*---------------------------[Separator]-------------------------------*/
 .ibanner-separator-parent {
   line-height: 1;
 }
 .uael-ibanner-container .ibanner-separator {
   border-color: #61ce70;
-    /*border-style: solid;*/
-    display: inline-block;
-    width: 20%;
-    border-width: 2px;
+  display: inline-block;
+  width: 20%;
+  border-width: 2px;
 }
-/*--------------------------------------------------------*/
-.premium-accordion-horizontal .premium-accordion-ul:hover li.premium-accordion-li:hover,
-.premium-accordion-horizontal .premium-accordion-ul li.premium-accordion-li-active {
+.uael-ibanner-container .ibanner-content-left {
+  text-align: left;
+}
+.uael-ibanner-container .ibanner-content-center {
+  text-align: center;
+}
+.uael-ibanner-container .ibanner-content-right {
+ text-align: right; 
+}
+/*-----------------------------[Effect 1 -> On-Hover]--------------------------------------------*/
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-effect-effect1:hover .ibanner-content-wrap *{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+ul[data-accordion-type="onhover"] li.ibanner-effect-effect1:hover .ibanner-content-wrap {
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
+  left: 30px;
+  border: 1px solid #fff;
+  transform: scale(1);
+  transition: all 700ms;
+}
+ul[data-accordion-type="onhover"] li.ibanner-effect-effect1 .ibanner-content .uael-ibanner-title{
+  transform: scale(1.2);
+  /*transition: all 700ms;*/
+}
+ul[data-accordion-type="onhover"] li.ibanner-effect-effect1 .ibanner-content-wrap .ibanner-content .uael-ibanner-icon {
+  transform: scale(1.5);
+  /*transition: all 700ms;*/
+}
+ul[data-accordion-type="onhover"] li.ibanner-effect-effect1 .ibanner-content .uael-ibanner-description {
+ transform: scale(1.2);
+ /*transition: all 700ms;*/
+}
+.ibanner-orientation-horizontal ul[data-accordion-type="onhover"] li.ibanner-effect-effect1{
+  width: 12%;
+}
+.ibanner-orientation-horizontal ul[data-accordion-type="onhover"] li.ibanner-effect-effect1:hover{
   width: 30%;
 }
-.premium-accordion-vertical .premium-accordion-ul:hover li.premium-accordion-li:hover,
-.premium-accordion-vertical .premium-accordion-ul li.premium-accordion-li-active {
+.ibanner-orientation-vertical ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-effect1:hover {
   height: 400px !important;
+}
+/*----------------------[Effect 1 -> On-Click]----------------------------------*/
+.ibanner-ul-list li.on-click-class.ibanner-effect-effect1.on-click-class .ibanner-content-wrap {
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
+  left: 30px;
+  border: 1px solid #fff;
+  transform: scale(1);
+  transition: all 700ms;
+}
+.uael-ibanner-container .ibanner-ul-list li.on-click-class .ibanner-content *{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.ibanner-orientation-horizontal .ibanner-ul-list li.ibanner-effect-effect1.on-click-class {
+  width: 30%;
+}
+ul[data-accordion-type="onclick"] li.ibanner-effect-effect1 .uael-ibanner-icon {
+  transform: scale(1.2);
+  /*transition: all 700ms;*/
+}
+ul[data-accordion-type="onclick"] li.ibanner-effect-effect1 .uael-ibanner-description {
+ transform: scale(1.2);
+ /*transition: all 700ms;*/
+}
+ul[data-accordion-type="onclick"] li.ibanner-effect-effect1 .uael-ibanner-title{
+  transform: scale(1.2);
+  /*transition: all 700ms;*/
+}
+.ibanner-orientation-vertical .ibanner-ul-list li.ibanner-effect-effect1.on-click-class {
+  height: 400px !important;
+}
+/*----------------------------------[Bubba -> On Hover]--------------------------------------*/
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-effect-bubba .ibanner-content * {
+  -webkit-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .ibanner-content *{
+ -webkit-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ -moz-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ -ms-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ -o-transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+ transition: transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.ibanner-orientation-horizontal ul[data-accordion-type="onhover"] li.ibanner-effect-bubba:hover {
+  width: 30%;
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .ibanner-background{
+  transition: opacity 0.35s;
+}
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .ibanner-content *{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .ibanner-content-wrap::before,
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .ibanner-content-wrap::after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .ibanner-content-wrap::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: scale(0, 1);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .ibanner-content-wrap::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: scale(1, 0);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .ibanner-content-wrap::before,
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .ibanner-content-wrap::after {
+  opacity: 1;
+  transform: scale(1);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-title {
+  /*padding-top: 30%;*/
+  transition: transform 0.35s;
+  transform: translate3d(0, -20px, 0);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-description {
+  /*padding: 20px 2.5em;*/
+  /*opacity: 0;*/
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(0, 20px, 0);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .uael-ibanner-title,
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .uael-ibanner-description {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.ibanner-orientation-vertical ul[data-accordion-type="onhover"] li.ibanner-effect-effect1.ibanner-effect-bubba {
+  width: 100%;
+  list-style-type: none;
+  height: 200px;
+}
+.ibanner-orientation-vertical ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover {
+  height: 400px !important;
+}
+/*------------------------------------[ Bubba -> On Click ]-----------------------------------*/
+
+.ibanner-orientation-horizontal li.ibanner-effect-bubba.on-click-class {
+  width: 30%;
+}
+li.ibanner-list-li.ibanner-effect-bubba .ibanner-background{
+  transition: opacity 0.35s;
+}
+.uael-ibanner-container li.ibanner-list-li.ibanner-effect-bubba.on-click-class .ibanner-content *{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+li.ibanner-list-li.ibanner-effect-bubba .ibanner-content-wrap::before,
+li.ibanner-list-li.ibanner-effect-bubba .ibanner-content-wrap::after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+li.ibanner-list-li.ibanner-effect-bubba .ibanner-content-wrap::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: scale(0, 1);
+}
+li.ibanner-list-li.ibanner-effect-bubba .ibanner-content-wrap::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: scale(1, 0);
+}
+li.ibanner-list-li.ibanner-effect-bubba.on-click-class .ibanner-content-wrap::before,
+li.ibanner-list-li.ibanner-effect-bubba.on-click-class .ibanner-content-wrap::after {
+  opacity: 1;
+  transform: scale(1);
+}
+li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-title {
+  /*padding-top: 30%;*/
+  transition: transform 0.35s;
+  transform: translate3d(0, -20px, 0);
+}
+li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-description {
+  /*padding: 20px 2.5em;*/
+  /*opacity: 0;*/
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(0, 20px, 0);
+}
+li.ibanner-list-li.ibanner-effect-bubba.on-click-class .uael-ibanner-title,
+li.ibanner-list-li.ibanner-effect-bubba.on-click-class .uael-ibanner-description {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.ibanner-orientation-vertical li.ibanner-effect-effect1.ibanner-effect-bubba {
+  width: 100%;
+  list-style-type: none;
+  height: 200px;
+}
+.ibanner-orientation-vertical li.ibanner-list-li.ibanner-effect-bubba.on-click-class {
+  height: 400px !important;
+}
+/*-------------------------------------[ Layla -> On Hover ]----------------------------------*/
+.ibanner-orientation-horizontal ul[data-accordion-type="onhover"] li.ibanner-effect-layla:hover {
+  width: 30%;
+}
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla:hover .ibanner-content *{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .ibanner-background,
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .uael-ibanner-title,
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .uael-ibanner-icon,
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .uael-ibanner-description {
+  transform: translate3d(-30px, 0, 0);
+}
+.ibanner-orientation-horizontal .ibanner-list-li.ibanner-effect-layla .ibanner-background {
+  max-width: calc(100% + 30px);
+  width: calc(100% + 30px);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::before,
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::after {
+  position: absolute;
+  content: '';
+  opacity: 0;
+}
+.ibanner-list-li.ibanner-effect-layla .ibanner-background,
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::before,
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::after{
+  transition: opacity 0.35s, transform 0.35s;
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::before {
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
+  left: 30px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: scale(0, 1);
+  transform-origin: 0 0;
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::after {
+  top: 30px;
+  right: 50px;
+  bottom: 30px;
+  left: 50px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: scale(1, 0);
+  transform-origin: 100% 0;
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla:hover .ibanner-background {
+  transform: translate3d(0, 0, 0);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla:hover .ibanner-content-wrap::before,
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla:hover .ibanner-content-wrap::after {
+  opacity: 1;
+  transform: scale(1);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla:hover .uael-ibanner-title,
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla:hover .uael-ibanner-description {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.ibanner-orientation-vertical ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla:hover {
+  height: 400px !important;
+}
+/*-------------------------------------[ Layla -> On Click ]----------------------------------*/
+.ibanner-orientation-horizontal li.ibanner-effect-layla.on-click-class {
+  width: 30%;
+}
+li.ibanner-list-li.ibanner-effect-layla .ibanner-background,
+li.ibanner-list-li.ibanner-effect-layla .uael-ibanner-title,
+li.ibanner-list-li.ibanner-effect-layla .uael-ibanner-icon,
+li.ibanner-list-li.ibanner-effect-layla .uael-ibanner-description {
+  transform: translate3d(-30px, 0, 0);
+}
+li.ibanner-list-li.ibanner-effect-layla .ibanner-background {
+  max-width: calc(100% + 30px);
+  width: calc(100% + 30px);
+}
+li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::before,
+li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::after {
+  position: absolute;
+  content: '';
+  opacity: 0;
+}
+.ibanner-list-li.ibanner-effect-layla .ibanner-background,
+li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::before,
+li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::after{
+  transition: opacity 0.35s, transform 0.35s;
+}
+li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::before {
+  top: 50px;
+  right: 30px;
+  bottom: 50px;
+  left: 30px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: scale(0, 1);
+  transform-origin: 0 0;
+}
+li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap::after {
+  top: 30px;
+  right: 50px;
+  bottom: 30px;
+  left: 50px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: scale(1, 0);
+  transform-origin: 100% 0;
+}
+li.ibanner-list-li.ibanner-effect-layla.on-click-class .ibanner-background {
+  transform: translate3d(0, 0, 0);
+}
+li.ibanner-list-li.ibanner-effect-layla.on-click-class .ibanner-content-wrap::before,
+li.ibanner-list-li.ibanner-effect-layla.on-click-class .ibanner-content-wrap::after {
+  opacity: 1;
+  transform: scale(1);
+}
+li.ibanner-list-li.ibanner-effect-layla.on-click-class .uael-ibanner-title,
+li.ibanner-list-li.ibanner-effect-layla.on-click-class .uael-ibanner-description {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.ibanner-orientation-vertical li.ibanner-list-li.ibanner-effect-layla.on-click-class {
+  height: 400px !important;
+}
+/*--------------------------[ Milo -> On Hover ]------------------------------------------------------*/
+.ibanner-orientation-horizontal ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-milo:hover {
+  width: 30%;
+}
+.uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-milo:hover .ibanner-content *{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+li.ibanner-list-li.ibanner-effect-milo .uael-ibanner-description {
+  padding: 0 10px 0 0;
+  width: 50%;
+  border-right: 1px solid #fff;
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(-40px, 0, 0);
+}
+li.ibanner-list-li.ibanner-effect-milo .ibanner-background {
+  max-width: none;
+  width: -webkit-calc(100% + 60px);
+  width: calc(100% + 60px);
+  opacity: 1;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-30px,0,0) scale(1.12);
+  transform: translate3d(-30px,0,0) scale(1.12);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-milo:hover .ibanner-background {
+  /*opacity: 0.5;*/
+  -webkit-transform: translate3d(0,0,0) scale(1);
+  transform: translate3d(0,0,0) scale(1);
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-milo .uael-ibanner-title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1em 1.2em;
+}
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-milo:hover .uael-ibanner-description {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.ibanner-orientation-vertical ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-milo:hover {
+  height: 400px !important;
+}
+/*------------------------------------[ Milo -> On Click ]------------------------------------*/
+.ibanner-orientation-horizontal li.ibanner-list-li.ibanner-effect-milo.on-click-class {
+  width: 30%;
+}
+.uael-ibanner-container li.ibanner-list-li.ibanner-effect-milo.on-click-class .ibanner-content *{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+li.ibanner-list-li.ibanner-effect-milo.on-click-class .ibanner-background {
+  transform: translate3d(-30px,0,0) scale(1.12);
+}
+li.ibanner-list-li.ibanner-effect-milo .uael-ibanner-title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1em 1.2em;
+  margin-bottom: 0px;
+}
+li.ibanner-list-li.ibanner-effect-milo.on-click-class .ibanner-background {
+  /*opacity: 0.5;*/
+  -webkit-transform: translate3d(0,0,0) scale(1);
+  transform: translate3d(0,0,0) scale(1);
+}
+li.ibanner-list-li.ibanner-effect-milo.on-click-class .uael-ibanner-description {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.ibanner-orientation-vertical li.ibanner-list-li.ibanner-effect-milo.on-click-class {
+  height: 400px !important;
+}
+/*----------------------------[Link ]--------------------------------------------------*/
+.uael-ibanner-container .ibanner-accordion-item-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+/*---------------------------------[Overlay]------*/
+.ibanner_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

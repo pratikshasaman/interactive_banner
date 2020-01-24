@@ -25,7 +25,9 @@ class Plugin {
 		wp_enqueue_style('ibanner_style');
 	}
 	public function include_ibanner_script() {
-		wp_register_script( 'ibanner_script', plugins_url( '\assets\js\ibanner.js', __FILE__ ),[ 'jquery' ] );
+
+		wp_register_script( 'ibanner_script', plugins_url( '\assets\js\ibanner.js', __FILE__ ),[ 'jquery' ], NULL, false);
+		// var_dump(plugins_url( '\assets\js\ibanner.js', __FILE__ ));
 		wp_enqueue_script( 'ibanner_script' );
 	}
 
