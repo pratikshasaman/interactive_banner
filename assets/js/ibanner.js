@@ -6,7 +6,8 @@ var ibanner = function($scope, $) {
   if( $type == 'onclick'){
     $("#ul-ibanner-img-id-" + $id + " li").off('click').on( 'click', function(e) {
     if( $(this).hasClass('on-click-class')){
-      $(this).removeClass("on-click-class");
+      // $(this).removeClass("on-click-class");
+      return;
     }
     else {
       $(this).siblings().removeClass("on-click-class");
@@ -14,14 +15,14 @@ var ibanner = function($scope, $) {
     } 
   });
  }
-  var $ibanner2 = $scope.find(".ib-orientation").eq(0);
-  $orientation = $ibanner2.data("orientation-type") !== undefined? $ibanner2.data("orientation-type"): "";
-  if( $orientation  == 'vertical'){
-    var count = $(".ibanner-ul-list").children().length;
-    if(count == 1) {
-      $(".ibanner-list-li").css("height","400px");
-    }
-  }
+  // var $ibanner2 = $scope.find(".ib-orientation").eq(0);
+  // $orientation = $ibanner2.data("orientation-type") !== undefined? $ibanner2.data("orientation-type"): "";
+  // if( $orientation  == 'vertical'){
+  //   var count = $(".ibanner-ul-list").children().length;
+  //   if(count == 1) {
+  //     $(".ibanner-list-li").css("height","400px");
+  //   }
+  // }
 }
 jQuery(window).on("elementor/frontend/init", function() {
   elementorFrontend.hooks.addAction(

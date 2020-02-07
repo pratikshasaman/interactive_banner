@@ -19,9 +19,6 @@
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-li.ibanner-list-li .uael-ibanner-description {
-  padding: 20px 2.5em;
-}
 .ibanner-orientation-horizontal .ibanner-list-li {
   display: table-cell;
   width: 16.666%;
@@ -96,7 +93,9 @@ li.ibanner-list-li .uael-ibanner-description {
  bottom: 0;
  right: 0;
  z-index: 1;
- padding: 1em;
+}
+.uael-ibanner-container li.ibanner-list-li.ibanner-effect-default .ibanner-content-wrap {
+ padding: 20px 2.5em;
 }
 .uael-ibanner-container .ibanner-content-wrap {
   -webkit-transition: background-color 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out, visibility 0.3s 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -201,12 +200,15 @@ li.ibanner-effect-default.on-click-class .ibanner-content .uael-ibanner-title {
 }
 .uael-ibanner-container .ibanner-content-left {
   text-align: left;
+  /*padding: 20px 0.5em; */
 }
 .uael-ibanner-container .ibanner-content-center {
   text-align: center;
+  /*padding: 20px 0.5em; */
 }
 .uael-ibanner-container .ibanner-content-right {
- text-align: right; 
+ text-align: right;
+  /*padding: 20px 0.5em; */
 }
 /*-----------------------------[Effect 1 -> On-Hover]--------------------------------------------*/
 .uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-effect-effect1:hover .ibanner-content-wrap *{
@@ -214,6 +216,9 @@ li.ibanner-effect-default.on-click-class .ibanner-content .uael-ibanner-title {
   visibility: visible;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+}
+.uael-ibanner-container .ibanner-effect-effect1 .ibanner-content-wrap {
+  padding: 20px 2.5em;
 }
 ul[data-accordion-type="onhover"] li.ibanner-effect-effect1:hover .ibanner-content-wrap {
   top: 50px;
@@ -228,7 +233,7 @@ ul[data-accordion-type="onhover"] li.ibanner-effect-effect1 .ibanner-content .ua
   transform: scale(1.2);
   /*transition: all 700ms;*/
 }
-ul[data-accordion-type="onhover"] li.ibanner-effect-effect1 .ibanner-content-wrap .ibanner-content .uael-ibanner-icon {
+ul[data-accordion-type="onhover"] li.ibanner-effect-effect1 .uael-ibanner-icon {
   transform: scale(1.5);
   /*transition: all 700ms;*/
 }
@@ -243,7 +248,7 @@ ul[data-accordion-type="onhover"] li.ibanner-effect-effect1 .ibanner-content .ua
   width: 30%;
 }
 .ibanner-orientation-vertical ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-effect1:hover {
-  height: 400px !important;
+  height: 400px;
 }
 /*----------------------[Effect 1 -> On-Click]----------------------------------*/
 .ibanner-ul-list li.on-click-class.ibanner-effect-effect1.on-click-class .ibanner-content-wrap {
@@ -252,7 +257,7 @@ ul[data-accordion-type="onhover"] li.ibanner-effect-effect1 .ibanner-content .ua
   bottom: 50px;
   left: 30px;
   border: 1px solid #fff;
-  transform: scale(1);
+  /*transform: scale(1.2);*/
   transition: all 700ms;
 }
 .uael-ibanner-container .ibanner-ul-list li.on-click-class .ibanner-content *{
@@ -264,7 +269,8 @@ ul[data-accordion-type="onhover"] li.ibanner-effect-effect1 .ibanner-content .ua
 .ibanner-orientation-horizontal .ibanner-ul-list li.ibanner-effect-effect1.on-click-class {
   width: 30%;
 }
-ul[data-accordion-type="onclick"] li.ibanner-effect-effect1 .uael-ibanner-icon {
+
+ul[data-accordion-type="onclick"] li.ibanner-effect-effect1 .uael-ibanner-icon  {
   transform: scale(1.2);
   /*transition: all 700ms;*/
 }
@@ -280,6 +286,10 @@ ul[data-accordion-type="onclick"] li.ibanner-effect-effect1 .uael-ibanner-title{
   height: 400px !important;
 }
 /*----------------------------------[Bubba -> On Hover]--------------------------------------*/
+
+.uael-ibanner-container li.ibanner-list-li.ibanner-effect-bubba .ibanner-content-wrap {
+  padding: 20px 3.5em;
+}
 .uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-effect-bubba .ibanner-content * {
   -webkit-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
   -moz-transition: transform 0.3s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -333,18 +343,20 @@ ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover 
   transform: scale(1);
 }
 ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-title {
-  /*padding-top: 30%;*/
   transition: transform 0.35s;
   transform: translate3d(0, -20px, 0);
 }
 ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-description {
-  /*padding: 20px 2.5em;*/
-  /*opacity: 0;*/
   transition: opacity 0.35s, transform 0.35s;
   transform: translate3d(0, 20px, 0);
 }
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-icon {
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(0, -20px, 0);
+}
 ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .uael-ibanner-title,
-ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .uael-ibanner-description {
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .uael-ibanner-description,
+ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-bubba:hover .uael-ibanner-icon {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -397,18 +409,20 @@ li.ibanner-list-li.ibanner-effect-bubba.on-click-class .ibanner-content-wrap::af
   transform: scale(1);
 }
 li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-title {
-  /*padding-top: 30%;*/
   transition: transform 0.35s;
   transform: translate3d(0, -20px, 0);
 }
 li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-description {
-  /*padding: 20px 2.5em;*/
-  /*opacity: 0;*/
   transition: opacity 0.35s, transform 0.35s;
   transform: translate3d(0, 20px, 0);
 }
+li.ibanner-list-li.ibanner-effect-bubba .uael-ibanner-icon {
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(0, -20px, 0);
+}
 li.ibanner-list-li.ibanner-effect-bubba.on-click-class .uael-ibanner-title,
-li.ibanner-list-li.ibanner-effect-bubba.on-click-class .uael-ibanner-description {
+li.ibanner-list-li.ibanner-effect-bubba.on-click-class .uael-ibanner-description,
+li.ibanner-list-li.ibanner-effect-bubba.on-click-class .uael-ibanner-icon {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -429,6 +443,9 @@ li.ibanner-list-li.ibanner-effect-bubba.on-click-class .uael-ibanner-description
   visibility: visible;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+}
+.uael-ibanner-container li.ibanner-list-li.ibanner-effect-layla .ibanner-content-wrap {
+padding: 20px 4.5em;
 }
 .uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .ibanner-background,
 .uael-ibanner-container ul[data-accordion-type="onhover"] li.ibanner-list-li.ibanner-effect-layla .uael-ibanner-title,
@@ -647,3 +664,5 @@ li.ibanner-list-li.ibanner-effect-milo.on-click-class .uael-ibanner-description 
   bottom: 0;
   right: 0;
 }
+
+/*-----------------------------[Button]--------------------------------------*/
